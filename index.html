@@ -59,9 +59,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/RhodesAcademyWebGL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/RhodesAcademyWebGL.data",
-        frameworkUrl: buildUrl + "/RhodesAcademyWebGL.framework.js",
-        codeUrl: buildUrl + "/RhodesAcademyWebGL.wasm",
+        dataUrl: buildUrl + "/RhodesAcademyWebGL.data.unityweb",
+        frameworkUrl: buildUrl + "/RhodesAcademyWebGL.framework.js.unityweb",
+        codeUrl: buildUrl + "/RhodesAcademyWebGL.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "RhodesAcademy",
@@ -108,7 +108,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  window.vuplex.SetFullscreen(1)/*https://support.vuplex.com/articles/webgl-fullscreen*/;
+                  unityInstance.SetFullscreen(1);
                 };
               }).catch((message) => {
                 alert(message);
